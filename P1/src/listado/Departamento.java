@@ -1,8 +1,10 @@
 package listado;
 
 /**
- * Created by Juanjo Jiménez on 7/03/17.
+ * Enumerado para representar los códigos de los departamentos de la empresa
+ *
+ * @author Juan José Jiménez García
  */
 public enum Departamento {
-   DEPNA, DEPSB, DEPSM, DEPSA
+    DEPNA, DEPSB, DEPSM, DEPSA
 }

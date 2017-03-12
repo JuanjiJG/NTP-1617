@@ -22,31 +22,24 @@ public class ListadoTest {
      * clase. Por eso el método debe ser estatico
      */
     @BeforeClass
-    public static void inicializacion() {
+    public static void inicializacion() throws IOException {
         System.out.println("Metodo inicializacion conjunto pruebas");
         // Se genera el listado de empleados
-        try {
-            listado = new Listado("./data/datos.txt");
-        }catch(IOException e){
-            System.out.println("Error en lectura de archivo de datos");
-        };
+        listado = new Listado("./data/datos.txt");
+        ;
 
         // Una vez disponibles los empleados se leen las listas
         // de asignaciones de empleados a cada grupo de las diferentes
         // asignaturas consideradas
-        try {
-            listado.cargarArchivoAsignacionDivision("./data/asignacionDIVNA.txt");
-            listado.cargarArchivoAsignacionDivision("./data/asignacionDIVID.txt");
-            listado.cargarArchivoAsignacionDivision("./data/asignacionDIVSW.txt");
-            listado.cargarArchivoAsignacionDivision("./data/asignacionDIVHW.txt");
-            listado.cargarArchivoAsignacionDivision("./data/asignacionDIVSER.txt");
-            listado.cargarArchivoAsignacionDepartamento("./data/asignacionDEPNA.txt");
-            listado.cargarArchivoAsignacionDepartamento("./data/asignacionDEPSB.txt");
-            listado.cargarArchivoAsignacionDepartamento("./data/asignacionDEPSM.txt");
-            listado.cargarArchivoAsignacionDepartamento("./data/asignacionDEPSA.txt");
-        } catch (IOException e) {
-            System.out.println("Error en lectura de archivos de asignacion");
-        }
+        listado.cargarArchivoAsignacionDivision("./data/asignacionDIVNA.txt");
+        listado.cargarArchivoAsignacionDivision("./data/asignacionDIVID.txt");
+        listado.cargarArchivoAsignacionDivision("./data/asignacionDIVSW.txt");
+        listado.cargarArchivoAsignacionDivision("./data/asignacionDIVHW.txt");
+        listado.cargarArchivoAsignacionDivision("./data/asignacionDIVSER.txt");
+        listado.cargarArchivoAsignacionDepartamento("./data/asignacionDEPNA.txt");
+        listado.cargarArchivoAsignacionDepartamento("./data/asignacionDEPSB.txt");
+        listado.cargarArchivoAsignacionDepartamento("./data/asignacionDEPSM.txt");
+        listado.cargarArchivoAsignacionDepartamento("./data/asignacionDEPSA.txt");
         System.out.println();
     }
 
