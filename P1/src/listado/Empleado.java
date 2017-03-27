@@ -9,136 +9,85 @@ public class Empleado {
     private String dni;
     private String nombre;
     private String apellidos;
-    private String email;
+    private String correo;
     private Division division;
     private Departamento departamento;
 
     /**
-     * Constructor de la clase Empleado
-     * Crea un objeto de tipo Empleado con sus datos básicos.
-     * Asigna la división y departamento NA al empleado.
+     * Constructor de la clase Empleado.
+     * Inicializa por defecto la división y departamento del empleado a NA.
      *
      * @param dni
      * @param nombre
      * @param apellidos
-     * @param email
-     * @author Juan José Jiménez García
+     * @param correo
      */
-    public Empleado(String dni, String nombre, String apellidos, String email) {
+    public Empleado(String dni, String nombre, String apellidos, String correo) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
-        this.email = email;
+        this.correo = correo;
         this.division = Division.DIVNA;
         this.departamento = Departamento.DEPNA;
     }
 
-    /**
-     * Método para obtener el DNI del empleado
-     *
-     * @return El DNI del empleado
-     * @author Juan José Jiménez García
-     */
     public String getDni() {
-        return this.dni;
+        return dni;
     }
 
-    /**
-     * Método para
-     * @param dni
-     * @author Juan José Jiménez García
-     */
     public void setDni(String dni) {
         this.dni = dni;
     }
 
-    /**
-     *
-     * @return
-     * @author Juan José Jiménez García
-     */
     public String getNombre() {
-        return this.nombre;
+        return nombre;
     }
 
-    /**
-     *
-     * @param nombre
-     * @author Juan José Jiménez García
-     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    /**
-     *
-     * @return
-     * @author Juan José Jiménez García
-     */
     public String getApellidos() {
-        return this.apellidos;
+        return apellidos;
     }
 
-    /**
-     *
-     * @param apellidos
-     * @author Juan José Jiménez García
-     */
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
 
-    /**
-     *
-     * @return
-     * @author Juan José Jiménez García
-     */
-    public String getEmail() {
-        return this.email;
+    public String getCorreo() {
+        return correo;
     }
 
-    /**
-     *
-     * @param email
-     * @author Juan José Jiménez García
-     */
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 
-    /**
-     *
-     * @return
-     * @author Juan José Jiménez García
-     */
     public Division getDivision() {
-        return this.division;
+        return division;
     }
 
-    /**
-     *
-     * @param division
-     * @author Juan José Jiménez García
-     */
     public void setDivision(Division division) {
         this.division = division;
     }
 
-    /**
-     *
-     * @return
-     * @author Juan José Jiménez García
-     */
     public Departamento getDepartamento() {
-        return this.departamento;
+        return departamento;
     }
 
-    /**
-     *
-     * @param departamento
-     * @author Juan José Jiménez García
-     */
     public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
+    }
+
+    @Override
+    public String toString() {
+        return "Empleado{" +
+                "dni='" + dni + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", correo='" + correo + '\'' +
+                ", division=" + division +
+                ", departamento=" + departamento +
+                "}\n";
     }
 }
