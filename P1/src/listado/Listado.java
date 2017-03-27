@@ -3,9 +3,9 @@ package listado;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
@@ -30,7 +30,7 @@ public class Listado {
         // Obtener todas las lineas a procesar del fichero de datos
         Stream<String> lineas = Files.lines(Paths.get(nombreArchivo));
 
-        this.lista = new HashMap<String, Empleado>();
+        this.lista = new TreeMap<String, Empleado>();
         this.lista = lineas.map(linea -> {
             /*
             Me produce un flujo de objetos de la clase Empleado.
@@ -128,7 +128,7 @@ public class Listado {
      */
     public Map<Division, Map<Departamento, Long>> obtenerContadoresDivisionDepartamento() {
         // Creo el HashMap que voy a devolver
-        Map<Division, Map<Departamento, Long>> agrupamiento = new HashMap<>();
+        Map<Division, Map<Departamento, Long>> agrupamiento = new TreeMap<>();
 
         // Creo un flujo con los distintos valores de Division y les asocio su contador de departamento
         Stream.of(Division.values()).
@@ -149,10 +149,10 @@ public class Listado {
                 entrada -> entrada.getValue().getDivision() == division);
 
         // Creo un Map de empleados agrupándolos por departamento
-        HashMap<Departamento, Long> contadoresDepartamento = empleadosDivision.collect(
+        TreeMap<Departamento, Long> contadoresDepartamento = empleadosDivision.collect(
                 Collectors.groupingBy(
                         entradaEmpleado -> entradaEmpleado.getValue().getDepartamento(),
-                        HashMap::new,
+                        TreeMap::new,
                         Collectors.counting()));
 
         return contadoresDepartamento;
