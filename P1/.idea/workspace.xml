@@ -14,6 +14,7 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
@@ -26,32 +27,7 @@
     <favorites_list name="P1" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Listado.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/listado/Listado.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="143" column="49" lean-forward="true" selection-start-line="143" selection-start-column="49" selection-end-line="143" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListadoTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/ListadoTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="91" column="54" lean-forward="true" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,10 +64,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="52" />
+    <option name="y" value="-4" />
+    <option name="width" value="1315" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -108,8 +84,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -123,44 +97,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="P1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="P1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="P1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="P1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="listado" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -194,7 +138,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ListadoTest.testObtenerContadoresDepartamentos">
+  <component name="RunManager" selected="JUnit.ListadoTest">
     <configuration default="false" name="ListadoTest" type="JUnit" factoryName="JUnit" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="P1" />
@@ -216,14 +160,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ListadoTest.testConstruccionListado" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ListadoTest.testComprobarDnisRepetidos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="P1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ListadoTest" />
-      <option name="METHOD_NAME" value="testConstruccionListado" />
+      <option name="METHOD_NAME" value="testComprobarDnisRepetidos" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -237,14 +181,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ListadoTest.testObtenerContadoresDepartamentos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ListadoTest.testComprobarCorreosRepetidos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="P1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ListadoTest" />
-      <option name="METHOD_NAME" value="testObtenerContadoresDepartamentos" />
+      <option name="METHOD_NAME" value="testComprobarCorreosRepetidos" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -258,14 +202,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ListadoTest.testObtenerContadoresDivisionDepartamento" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ListadoTest.testBuscarEmpleadosSinDivision" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="P1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ListadoTest" />
-      <option name="METHOD_NAME" value="testObtenerContadoresDivisionDepartamento" />
+      <option name="METHOD_NAME" value="testBuscarEmpleadosSinDivision" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -279,14 +223,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ListadoTest.testCargarArchivosAsignacion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ListadoTest.testBuscarEmpleadosConDivisionSinDepartamento" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="P1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="ListadoTest" />
-      <option name="METHOD_NAME" value="testCargarArchivosAsignacion" />
+      <option name="METHOD_NAME" value="testBuscarEmpleadosConDivisionSinDepartamento" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -753,18 +697,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.ListadoTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ListadoTest.testConstruccionListado" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ListadoTest.testObtenerContadoresDepartamentos" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ListadoTest.testObtenerContadoresDivisionDepartamento" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ListadoTest.testCargarArchivosAsignacion" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ListadoTest.testComprobarDnisRepetidos" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ListadoTest.testComprobarCorreosRepetidos" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ListadoTest.testBuscarEmpleadosSinDivision" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ListadoTest.testBuscarEmpleadosConDivisionSinDepartamento" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ListadoTest.testObtenerContadoresDepartamentos" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ListadoTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ListadoTest.testCargarArchivosAsignacion" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ListadoTest.testObtenerContadoresDivisionDepartamento" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ListadoTest.testConstruccionListado" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ListadoTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ListadoTest.testBuscarEmpleadosConDivisionSinDepartamento" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ListadoTest.testBuscarEmpleadosSinDivision" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ListadoTest.testComprobarCorreosRepetidos" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ListadoTest.testComprobarDnisRepetidos" />
       </list>
     </recent_temporary>
   </component>
@@ -804,43 +748,44 @@
       <workItem from="1490539431473" duration="14739000" />
       <workItem from="1490600122307" duration="1079000" />
       <workItem from="1491146251535" duration="2725000" />
+      <workItem from="1491152523103" duration="8982000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ListadoTest - 2017.04.02 at 17h 19m 00s.xml">
+    <history-entry file="ListadoTest - 2017.04.02 at 23h 39m 28s.xml">
       <configuration name="ListadoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ListadoTest - 2017.04.02 at 17h 21m 09s.xml">
+    <history-entry file="ListadoTest - 2017.04.02 at 23h 39m 51s.xml">
       <configuration name="ListadoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ListadoTest - 2017.04.02 at 17h 26m 47s.xml">
+    <history-entry file="ListadoTest - 2017.04.02 at 23h 53m 21s.xml">
       <configuration name="ListadoTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ListadoTest - 2017.04.02 at 17h 27m 19s.xml">
-      <configuration name="ListadoTest" configurationId="JUnit" />
+    <history-entry file="ListadoTest_testBuscarEmpleadosConDivisionSinDepartamento - 2017.04.02 at 23h 38m 19s.xml">
+      <configuration name="ListadoTest.testBuscarEmpleadosConDivisionSinDepartamento" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ListadoTest_testCargarArchivosAsignacion - 2017.04.02 at 17h 23m 37s.xml">
-      <configuration name="ListadoTest.testCargarArchivosAsignacion" configurationId="JUnit" />
+    <history-entry file="ListadoTest_testBuscarEmpleadosSinDivision - 2017.04.02 at 23h 36m 43s.xml">
+      <configuration name="ListadoTest.testBuscarEmpleadosSinDivision" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ListadoTest_testCargarArchivosAsignacion - 2017.04.02 at 17h 25m 36s.xml">
-      <configuration name="ListadoTest.testCargarArchivosAsignacion" configurationId="JUnit" />
+    <history-entry file="ListadoTest_testBuscarEmpleadosSinDivision - 2017.04.02 at 23h 37m 33s.xml">
+      <configuration name="ListadoTest.testBuscarEmpleadosSinDivision" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ListadoTest_testCargarArchivosAsignacion - 2017.04.02 at 17h 26m 26s.xml">
-      <configuration name="ListadoTest.testCargarArchivosAsignacion" configurationId="JUnit" />
+    <history-entry file="ListadoTest_testComprobarCorreosRepetidos - 2017.04.02 at 23h 27m 50s.xml">
+      <configuration name="ListadoTest.testComprobarCorreosRepetidos" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ListadoTest_testObtenerContadoresDepartamentos - 2017.04.02 at 17h 31m 20s.xml">
-      <configuration name="ListadoTest.testObtenerContadoresDepartamentos" configurationId="JUnit" />
+    <history-entry file="ListadoTest_testComprobarCorreosRepetidos - 2017.04.02 at 23h 28m 20s.xml">
+      <configuration name="ListadoTest.testComprobarCorreosRepetidos" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ListadoTest_testObtenerContadoresDivisionDepartamento - 2017.03.27 at 01h 35m 54s.xml">
-      <configuration name="ListadoTest.testObtenerContadoresDivisionDepartamento" configurationId="JUnit" />
+    <history-entry file="ListadoTest_testComprobarCorreosRepetidos - 2017.04.02 at 23h 29m 00s.xml">
+      <configuration name="ListadoTest.testComprobarCorreosRepetidos" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ListadoTest_testObtenerContadoresDivisionDepartamento - 2017.03.27 at 01h 55m 03s.xml">
-      <configuration name="ListadoTest.testObtenerContadoresDivisionDepartamento" configurationId="JUnit" />
+    <history-entry file="ListadoTest_testComprobarCorreosRepetidos - 2017.04.02 at 23h 29m 41s.xml">
+      <configuration name="ListadoTest.testComprobarCorreosRepetidos" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36651000" />
+    <option name="totallyTimeSpent" value="45633000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -852,8 +797,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="52" y="-4" width="1315" height="773" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -864,26 +808,26 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32668713" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14818764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15027538" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24940991" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -898,7 +842,9 @@
     </ignored-roots>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -912,6 +858,38 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4810#4811#0" expanded="true" />
+            <element signature="e#4863#4864#0" expanded="true" />
+            <element signature="e#8356#8357#0" expanded="true" />
+            <element signature="e#8436#8437#0" expanded="true" />
+            <element signature="e#11044#11045#0" expanded="true" />
+            <element signature="e#11127#11128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/ListadoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1638">
+          <caret line="91" column="54" lean-forward="true" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listado/Listado.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4810#4811#0" expanded="true" />
+            <element signature="e#4863#4864#0" expanded="true" />
+            <element signature="e#8356#8357#0" expanded="true" />
+            <element signature="e#8436#8437#0" expanded="true" />
+            <element signature="e#11044#11045#0" expanded="true" />
+            <element signature="e#11127#11128#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -932,6 +910,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4810#4811#0" expanded="true" />
+            <element signature="e#4863#4864#0" expanded="true" />
+            <element signature="e#8356#8357#0" expanded="true" />
+            <element signature="e#8436#8437#0" expanded="true" />
+            <element signature="e#11044#11045#0" expanded="true" />
+            <element signature="e#11127#11128#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -966,6 +950,12 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4810#4811#0" expanded="true" />
+            <element signature="e#4863#4864#0" expanded="true" />
+            <element signature="e#8356#8357#0" expanded="true" />
+            <element signature="e#8436#8437#0" expanded="true" />
+            <element signature="e#11044#11045#0" expanded="true" />
+            <element signature="e#11127#11128#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1106,20 +1096,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/ListadoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/listado/Listado.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="91" column="54" lean-forward="true" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="54" />
+        <state relative-caret-position="91">
+          <caret line="162" column="33" lean-forward="true" selection-start-line="162" selection-start-column="33" selection-end-line="162" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4810#4811#0" expanded="true" />
+            <element signature="e#4863#4864#0" expanded="true" />
+            <element signature="e#8356#8357#0" expanded="true" />
+            <element signature="e#8436#8437#0" expanded="true" />
+            <element signature="e#11044#11045#0" expanded="true" />
+            <element signature="e#11127#11128#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/listado/Listado.java">
+    <entry file="file://$PROJECT_DIR$/test/ListadoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="143" column="49" lean-forward="true" selection-start-line="143" selection-start-column="49" selection-end-line="143" selection-end-column="49" />
+        <state relative-caret-position="-2153">
+          <caret line="52" column="75" lean-forward="false" selection-start-line="52" selection-start-column="75" selection-end-line="52" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

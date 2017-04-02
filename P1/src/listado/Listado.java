@@ -3,6 +3,7 @@ package listado;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -59,7 +60,7 @@ public class Listado {
     }
 
     /**
-     * Método para cargar un fichero de datos de asignación de divisiones y asignarlo a los empleados.
+     * Método para cargar un fichero de datos de asignación de divisionesy asignarlo a los empleados.
      * Lee el fichero, identifica la división y asigna la misma a los empleados que indique.
      *
      * @param nombreArchivo la ruta del fichero de datos a procesar
@@ -70,8 +71,7 @@ public class Listado {
         Primero debemos saber qué división estamos procesando.
         De esta manera haremos correctamente la asignación de los empleados.
          */
-        Stream<String> lineas = Files.lines(Paths.get(nombreArchivo));
-        String division = lineas.findFirst().get();
+        String division = Files.lines(Paths.get(nombreArchivo)).findFirst().get();
 
         /*
         Ahora procedemos a realizar las asignaciones de división.
@@ -127,7 +127,7 @@ public class Listado {
      * @return un Map de tipo <Division, Map<Departamento, Long>> que indica el nº de empleados por Departamento en cada Division
      */
     public Map<Division, Map<Departamento, Long>> obtenerContadoresDivisionDepartamento() {
-        // Creo el HashMap que voy a devolver
+        // Creo el TreeMap que voy a devolver
         Map<Division, Map<Departamento, Long>> agrupamiento = new TreeMap<>();
 
         // Creo un flujo con los distintos valores de Division y les asocio su contador de departamento
@@ -144,18 +144,16 @@ public class Listado {
      * @return un Map de tipo <Departamento, Long> que indica el departamento y su nº de empleados
      */
     public Map<Departamento, Long> obtenerContadoresDepartamento(Division division) {
-        // Obtengo un flujo de empleados de una división
-        Stream<Map.Entry<String, Empleado>> empleadosDivision = this.lista.entrySet().stream().filter(
-                entrada -> entrada.getValue().getDivision() == division);
+        // Creo el Map que voy a devolver
+        Map<Departamento, Long> agrupamiento = new TreeMap<>();
 
-        // Creo un Map de empleados agrupándolos por departamento
-        TreeMap<Departamento, Long> contadoresDepartamento = empleadosDivision.collect(
-                Collectors.groupingBy(
-                        entradaEmpleado -> entradaEmpleado.getValue().getDepartamento(),
-                        TreeMap::new,
-                        Collectors.counting()));
+        // Voy componiendo el Map recopilando empleados de cada uno de los departamentos
+        // que sean también de la división dada como argumento.
+        Stream.of(Departamento.values()).
+                forEach(departamento -> agrupamiento.put(departamento,
+                        this.lista.entrySet().stream().filter(empleado -> (empleado.getValue().getDivision() == division && empleado.getValue().getDepartamento() == departamento)).count()));
 
-        return contadoresDepartamento;
+        return agrupamiento;
     }
 
     /**
@@ -177,7 +175,7 @@ public class Listado {
     public List<Empleado> buscarEmpleadosConDivisionSinDepartamento() {
         Predicate<Empleado> condicion = empleado -> (
                 empleado.getDivision() != Division.DIVNA &&
-                empleado.getDepartamento() == Departamento.DEPNA);
+                        empleado.getDepartamento() == Departamento.DEPNA);
 
         return lista.values().stream().filter(condicion).collect(Collectors.toList());
     }
@@ -200,38 +198,118 @@ public class Listado {
     /**
      * Metodo para determinar si hay dnis repetidos
      *
-     * @return
+     * @return un booleano que indica si hay dnis repetidos
      */
     public boolean hayDnisRepetidos() {
-        return false;
+        return (obtenerDnisRepetidos().entrySet().stream().count() != 0);
     }
 
     /**
      * Método para obtener una lista de DNIs repetidos, junto con la
      * lista de trabajadores asociados a cada DNI repetido (en caso de
      * haberlos)
+     *
+     * @return @return un Map formado por los dnis que tienen repeticiones, con la lista de empleados asociada
      */
     public Map<String, List<Empleado>> obtenerDnisRepetidos() {
-        return null;
+        // Creo el Map que voy a devolver
+        Map<String, List<Empleado>> listaDnisRepetidos = new TreeMap<>();
+        // Creo un Map temporal de DNIs
+        Map<String, List<Empleado>> listaDnis = new TreeMap<>();
+
+        /*
+        Algoritmo a seguir:
+        1. Iterar sobre la lista general con un flujo.
+        Con cada elemento de la lista general:
+            1.1. Crear una lista de empleados.
+            1.2. Iterar de nuevo sobre la lista general, cogiendo el "value" (el objeto Empleado)
+            Con cada elemento de esa segunda lista:
+                1.2.1. Comparar su DNI con el DNI de la anterior lista (paso 1).
+                Aplicando un filtro, nos quedamos con el empleado si son iguales los DNIs.
+                1.2.2. Añadirlo a la lista de empleados creada en el paso 1.1.
+            1.3. Añadir a la lista temporal de correos una nueva entrada con el DNI y la lista de empleados creada.
+         */
+        this.lista.entrySet().stream().forEach(empleado -> {
+            List<Empleado> listaEmpleados = new ArrayList<>();
+            this.lista.values().stream().filter(
+                    empleadoLista -> (empleadoLista.getDni().compareTo(empleado.getValue().getDni()) == 0)
+            ).forEach(empleadoLista -> listaEmpleados.add(empleadoLista));
+            listaDnis.put(
+                    empleado.getValue().getDni(), listaEmpleados);
+        });
+
+        /*
+        Algoritmo a seguir tras obtener el Map temporal:
+        1. Iterar sobre el Map temporal.
+        Para cada elemento del agrupamiento:
+            1.1. Mediante un filtro, quedarnos con aquellas entradas que tengan un "value" con tamaño mayor que 1.
+            1.2. Con aquellas entradas que nos hemos quedado, insertarlas en el Map que se va a devolver.
+         */
+        listaDnis.entrySet().stream().filter(
+                dni -> (dni.getValue().size() > 1)
+        ).forEach(dni -> listaDnisRepetidos.put(
+                dni.getKey(), dni.getValue()));
+
+        // Devolver el Map correspondiente
+        return listaDnisRepetidos;
     }
 
     /**
-     * Metodo para determinar si hay correos repetidos
+     * Método para determinar si hay correos repetidos
+     *
+     * @return un booleano que indica si hay correos repetidos
      */
     public boolean hayCorreosRepetidos() {
-        return false;
+        return (obtenerCorreosRepetidos().entrySet().stream().count() != 0);
     }
 
     /**
      * Metodo para obtener una lista de correos repetidos, junto con la
      * lista de trabajadores asociados a cada correo repetido (en caso de
      * haberlos)
+     *
+     * @return un Map formado por los correos que tienen repeticiones, con la lista de empleados asociada
      */
     public Map<String, List<Empleado>> obtenerCorreosRepetidos() {
-        return null;
+        // Creo el Map que voy a devolver
+        Map<String, List<Empleado>> listaCorreosRepetidos = new TreeMap<>();
+        // Creo un Map temporal de correos electrónicos
+        Map<String, List<Empleado>> listaCorreos = new TreeMap<>();
+
+        /*
+        Algoritmo a seguir:
+        1. Iterar sobre la lista general con un flujo.
+        Con cada elemento de la lista general:
+            1.1. Crear una lista de empleados.
+            1.2. Iterar de nuevo sobre la lista general, cogiendo el "value" (el objeto Empleado)
+            Con cada elemento de esa segunda lista:
+                1.2.1. Comparar su email con el email de la anterior lista (paso 1).
+                Aplicando un filtro, nos quedamos con el empleado si son iguales los correos.
+                1.2.2. Añadirlo a la lista de empleados creada en el paso 1.1.
+            1.3. Añadir a la lista temporal de correos una nueva entrada con el email y la lista de empleados creada.
+         */
+        this.lista.entrySet().stream().forEach(empleado -> {
+            List<Empleado> listaEmpleados = new ArrayList<>();
+            this.lista.values().stream().filter(
+                    empleadoLista -> (empleadoLista.getCorreo().compareTo(empleado.getValue().getCorreo()) == 0)
+            ).forEach(empleadoLista -> listaEmpleados.add(empleadoLista));
+            listaCorreos.put(
+                    empleado.getValue().getCorreo(), listaEmpleados);
+        });
+
+        /*
+        Algoritmo a seguir tras obtener el Map temporal:
+        1. Iterar sobre el Map temporal.
+        Para cada elemento del agrupamiento:
+            1.1. Mediante un filtro, quedarnos con aquellas entradas que tengan un "value" con tamaño mayor que 1.
+            1.2. Con aquellas entradas que nos hemos quedado, insertarlas en el Map que se va a devolver.
+         */
+        listaCorreos.entrySet().stream().filter(
+                correo -> (correo.getValue().size() > 1)
+        ).forEach(correo -> listaCorreosRepetidos.put(
+                correo.getKey(), correo.getValue()));
+
+        // Devolver el Map correspondiente
+        return listaCorreosRepetidos;
     }
-
-    // TODO - Hacer un método que indique si un empleado tiene tiene asignada división (y departamento)
-
-    // TODO - Opcional - Hacer que los que no tienen asignado nada se asignen en los departamentos intentando lograr un equilibrio
 }
