@@ -58,7 +58,6 @@ public class ListadoTest {
     @Test
     public void testConstruccionListado() throws Exception{
         assert(listado.obtenerNumeroEmpleados() == 1000);
-        System.out.println(listado.toString());
     }
 
     /**
@@ -90,7 +89,7 @@ public class ListadoTest {
         contadores.keySet().stream().forEach(key -> System.out.println(
                 key.toString() + " - " + contadores.get(key)));
         // Se comprueba que los valores son DEPNA = 49, DEPSB = 48, DEPSM = 53, DEPSA = 41
-        Long contadoresReferencia[]={48L,49L,41L,53L};
+        Long contadoresReferencia[]={49L,48L,53L,41L};
         Long contadoresCalculados[]=new Long[4];
         assertArrayEquals(contadores.values().toArray(contadoresCalculados),
                           contadoresReferencia);
@@ -108,11 +107,11 @@ public class ListadoTest {
                 listado.obtenerContadoresDivisionDepartamento();
 
         // Se comprueban los valores obtenenidos con los valores por referencia
-        Long contadoresReferenciaNA[]={58L,49L,53L,53L};
-        Long contadoresReferenciaID[]={43L,54L,49L,42L};
-        Long contadoresReferenciaHW[]={62L,44L,43L,67L};
-        Long contadoresReferenciaSW[]={53L,42L,52L,45L};
-        Long contadoresReferenciaSER[]={41L,49L,48L,53L};
+        Long contadoresReferenciaNA[]={49L,53L,53L,58L};
+        Long contadoresReferenciaID[]={54L,49L,42L,43L};
+        Long contadoresReferenciaHW[]={44L,43L,67L,62L};
+        Long contadoresReferenciaSW[]={42L,52L,45L,53L};
+        Long contadoresReferenciaSER[]={49L,48L,53L,41L};
 
         // Se comprueban los resultado del metodo con los de referencia
         Long contadoresCalculados[]=new Long[4];

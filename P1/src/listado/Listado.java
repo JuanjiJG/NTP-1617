@@ -191,10 +191,10 @@ public class Listado {
      */
     public List<Empleado> buscarEmpleadosSinDepartamento(Division divisionObjetivo) {
         Predicate<Empleado> condicion = empleado -> (
-                empleado.getDivision() != divisionObjetivo &&
+                empleado.getDivision() == divisionObjetivo &&
                         empleado.getDepartamento() == Departamento.DEPNA);
 
-        return lista.values().stream().filter(condicion).collect(Collectors.toList());
+        return (this.lista.values().stream().filter(condicion).collect(Collectors.toList()));
     }
 
     /**
