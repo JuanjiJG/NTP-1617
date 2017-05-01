@@ -111,7 +111,7 @@ class ConjuntoSuite extends FunSuite {
   }
 
   /**
-    * Test de forall
+    * Test de paraTodo
     */
   test("Test de paraTodo") {
     val conjunto = Conjunto((x: Int) => x < 10)

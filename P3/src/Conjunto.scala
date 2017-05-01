@@ -34,7 +34,7 @@ class Conjunto(val funcionCaracteristica: Int => Boolean) {
 }
 
 /**
-  * Objecto companion que ofrece métodos para trabajar con
+  * Objeto companion que ofrece métodos para trabajar con
   * conjuntos
   */
 object Conjunto {
@@ -53,5 +53,101 @@ object Conjunto {
     */
   def apply(f: Int => Boolean): Conjunto = {
     new Conjunto(f)
+  }
+
+  /**
+    * Método para crear un conjunto de un solo elemento
+    *
+    * @param elemento el elemento del que se quiere crear un conjunto
+    * @return un conjunto que representa a ese único elemento
+    */
+  def conjuntoUnElemento(elemento: Int): Conjunto = {
+
+  }
+
+  /**
+    * Método para calcular la unión de dos conjuntos
+    *
+    * @param c1 el primer conjunto
+    * @param c2 el segundo conjunto
+    * @return un conjunto que es el resultado de la unión de los dos conjuntos
+    */
+  def union(c1: Conjunto, c2: Conjunto): Conjunto = {
+
+  }
+
+  /**
+    * Método para calcular la intersección de dos conjuntos
+    *
+    * @param c1 el primer conjunto
+    * @param c2 el segundo conjunto
+    * @return un conjunto que es el resultado de la intersección de los dos conjuntos
+    */
+  def interseccion(c1: Conjunto, c2: Conjunto): Conjunto = {
+
+  }
+
+  /**
+    * Método para calcular la diferencia de dos conjuntos
+    *
+    * @param c1 el primer conjunto
+    * @param c2 el segundo conjunto
+    * @return un conjunto que es el resultado de la difererncia de los dos conjuntos
+    */
+  def diferencia(c1: Conjunto, c2: Conjunto): Conjunto = {
+
+  }
+
+  /**
+    * Método para filtrar un conjunto dado un predicado
+    *
+    * @param c         el conjunto a filtrar
+    * @param predicado la condición que deben cumplir los elementos para pasar el filtrado
+    * @return un conjunto filtrado con solo los elementos que cumplen el predicado
+    */
+  def filtrar(c: Conjunto, predicado: Int => Boolean): Conjunto = {
+
+  }
+
+  /**
+    * Método para comprobar si se cumple un predicado para todos los elementos del conjunto
+    *
+    * @param c         el conjunto sobre el que hacer la comprobación
+    * @param predicado la condición que deben cupmplir todos los elementos del conjunto
+    * @return un booleano que indica si todos los elementos del conjunto cumplen el predicado
+    */
+  def paraTodo(c: Conjunto, predicado: Int => Boolean): Boolean = {
+    @annotation.tailrec
+    def paraTodo(conjunto: Conjunto, predicado:
+
+    def iterar(elemento: Int): Boolean = {
+      if (???) ???
+      else if (???) ???
+      else predicado(elemento) && iterar(???)
+    }
+
+    iterar(-LIMITE)
+  }
+
+  /**
+    * Método para comprobar si existe al menos un elemento para el que se cumple un predicado
+    *
+    * @param c         el conjunto sobre el que comprobar si existe el elemento
+    * @param predicado la condición que debe cumplir al menos un elemento
+    * @return un booleano que indica si existe al menos un elemento que cumple el predicado
+    */
+  def existe(c: Conjunto, predicado: Int => Boolean): Boolean = {
+
+  }
+
+  /**
+    * Método para aplicar un mapeado sobre un conjunto, transformándolo en otro
+    *
+    * @param c       el conjunto sobre el que aplicar el mapeado
+    * @param funcion la función a aplicar a los elementos del conjunto
+    * @return un conjunto nuevo resultado de mapear el pasado como argumento
+    */
+  def map(c: Conjunto, funcion: Int => Int): Conjunto = {
+
   }
 }
