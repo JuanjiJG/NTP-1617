@@ -16,7 +16,7 @@
       <file leaf-file-name="ConjuntoSuite.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ConjuntoSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
+            <state relative-caret-position="-249">
               <caret line="113" column="22" lean-forward="false" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
@@ -28,8 +28,8 @@
       <file leaf-file-name="Conjunto.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Conjunto.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-169">
-              <caret line="113" column="5" lean-forward="false" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
+            <state relative-caret-position="1024">
+              <caret line="64" column="29" lean-forward="true" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -45,8 +45,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Conjunto.scala" />
         <option value="$PROJECT_DIR$/test/ConjuntoSuite.scala" />
+        <option value="$PROJECT_DIR$/src/Conjunto.scala" />
       </list>
     </option>
   </component>
@@ -124,7 +124,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
@@ -597,12 +597,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1493628665372</updated>
-      <workItem from="1493628672035" duration="4061000" />
+      <workItem from="1493628672035" duration="8095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4061000" />
+    <option name="totallyTimeSpent" value="8095000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="28" width="1318" height="740" extended-state="6" />
@@ -656,7 +656,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test/ConjuntoSuite.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
+        <state relative-caret-position="-249">
           <caret line="113" column="22" lean-forward="false" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
@@ -666,8 +666,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Conjunto.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-169">
-          <caret line="113" column="5" lean-forward="false" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
+        <state relative-caret-position="1024">
+          <caret line="64" column="29" lean-forward="true" selection-start-line="64" selection-start-column="29" selection-end-line="64" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -738,7 +738,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>org.scalatest:scalatest_2.11:3.0.1</last-edited>
+          <last-edited>com.bluecatcode.junit:junit-4.12-extended:1.0.4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

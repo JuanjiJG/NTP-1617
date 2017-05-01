@@ -62,7 +62,7 @@ object Conjunto {
     * @return un conjunto que representa a ese único elemento
     */
   def conjuntoUnElemento(elemento: Int): Conjunto = {
-
+    (x: Int) => x == elemento
   }
 
   /**
@@ -73,7 +73,7 @@ object Conjunto {
     * @return un conjunto que es el resultado de la unión de los dos conjuntos
     */
   def union(c1: Conjunto, c2: Conjunto): Conjunto = {
-
+    (x: Int) => c1(x) || c2(x)
   }
 
   /**
@@ -84,7 +84,7 @@ object Conjunto {
     * @return un conjunto que es el resultado de la intersección de los dos conjuntos
     */
   def interseccion(c1: Conjunto, c2: Conjunto): Conjunto = {
-
+    (x: Int) => c1(x) && c2(x)
   }
 
   /**
@@ -95,7 +95,7 @@ object Conjunto {
     * @return un conjunto que es el resultado de la difererncia de los dos conjuntos
     */
   def diferencia(c1: Conjunto, c2: Conjunto): Conjunto = {
-
+    (x: Int) => c1(x) && !c2(x)
   }
 
   /**
@@ -106,7 +106,7 @@ object Conjunto {
     * @return un conjunto filtrado con solo los elementos que cumplen el predicado
     */
   def filtrar(c: Conjunto, predicado: Int => Boolean): Conjunto = {
-
+    (x: Int) => c(x) && predicado(x)
   }
 
   /**
@@ -118,14 +118,15 @@ object Conjunto {
     */
   def paraTodo(c: Conjunto, predicado: Int => Boolean): Boolean = {
     @annotation.tailrec
-    def paraTodo(conjunto: Conjunto, predicado:
-
     def iterar(elemento: Int): Boolean = {
-      if (???) ???
-      else if (???) ???
-      else predicado(elemento) && iterar(???)
+      // Caso base 1: Hemos superado el límite de iteración,
+      // significa que todos los anteriores elementos cumplen el predicado
+      if (elemento > LIMITE) true
+      else if (!c(elemento)) iterar(elemento + 1) // Si el elemento no está en el conjunto, pasamos al siguiente elemento
+      else predicado(elemento) && iterar(elemento + 1) // En caso contrario, comprobamos que el elemento cumple el predicado
     }
 
+    // Desencadenamos la ejecución
     iterar(-LIMITE)
   }
 
@@ -137,7 +138,7 @@ object Conjunto {
     * @return un booleano que indica si existe al menos un elemento que cumple el predicado
     */
   def existe(c: Conjunto, predicado: Int => Boolean): Boolean = {
-
+    !paraTodo(c, x => !predicado(x))
   }
 
   /**
@@ -148,6 +149,6 @@ object Conjunto {
     * @return un conjunto nuevo resultado de mapear el pasado como argumento
     */
   def map(c: Conjunto, funcion: Int => Int): Conjunto = {
-
+    (x: Int) => existe(c, y => funcion(y) == x)
   }
 }
