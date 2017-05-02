@@ -62,7 +62,7 @@ object Conjunto {
     * @return un conjunto que representa a ese único elemento
     */
   def conjuntoUnElemento(elemento: Int): Conjunto = {
-    (x: Int) => x == elemento
+    new Conjunto((x: Int) => x == elemento)
   }
 
   /**
@@ -73,7 +73,7 @@ object Conjunto {
     * @return un conjunto que es el resultado de la unión de los dos conjuntos
     */
   def union(c1: Conjunto, c2: Conjunto): Conjunto = {
-    (x: Int) => c1(x) || c2(x)
+    new Conjunto((x: Int) => c1(x) || c2(x))
   }
 
   /**
@@ -84,7 +84,7 @@ object Conjunto {
     * @return un conjunto que es el resultado de la intersección de los dos conjuntos
     */
   def interseccion(c1: Conjunto, c2: Conjunto): Conjunto = {
-    (x: Int) => c1(x) && c2(x)
+    new Conjunto((x: Int) => c1(x) && c2(x))
   }
 
   /**
@@ -95,7 +95,7 @@ object Conjunto {
     * @return un conjunto que es el resultado de la difererncia de los dos conjuntos
     */
   def diferencia(c1: Conjunto, c2: Conjunto): Conjunto = {
-    (x: Int) => c1(x) && !c2(x)
+    new Conjunto((x: Int) => c1(x) && !c2(x))
   }
 
   /**
@@ -106,7 +106,7 @@ object Conjunto {
     * @return un conjunto filtrado con solo los elementos que cumplen el predicado
     */
   def filtrar(c: Conjunto, predicado: Int => Boolean): Conjunto = {
-    (x: Int) => c(x) && predicado(x)
+    new Conjunto((x: Int) => c(x) && predicado(x))
   }
 
   /**
@@ -149,6 +149,6 @@ object Conjunto {
     * @return un conjunto nuevo resultado de mapear el pasado como argumento
     */
   def map(c: Conjunto, funcion: Int => Int): Conjunto = {
-    (x: Int) => existe(c, y => funcion(y) == x)
+    new Conjunto((x: Int) => existe(c, y => funcion(y) == x))
   }
 }
