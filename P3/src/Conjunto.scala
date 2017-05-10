@@ -73,7 +73,7 @@ object Conjunto {
     * @return un conjunto que es el resultado de la unión de los dos conjuntos
     */
   def union(c1: Conjunto, c2: Conjunto): Conjunto = {
-    new Conjunto((x: Int) => c1(x) || c2(x))
+    Conjunto((x: Int) => c1(x) || c2(x))
   }
 
   /**
@@ -84,7 +84,7 @@ object Conjunto {
     * @return un conjunto que es el resultado de la intersección de los dos conjuntos
     */
   def interseccion(c1: Conjunto, c2: Conjunto): Conjunto = {
-    new Conjunto((x: Int) => c1(x) && c2(x))
+    Conjunto((x: Int) => c1(x) && c2(x))
   }
 
   /**

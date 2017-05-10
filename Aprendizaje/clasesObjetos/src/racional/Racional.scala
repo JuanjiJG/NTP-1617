@@ -21,6 +21,15 @@ class Racional(n:Int, d:Int) {
     numerador * otro.denominador < denominador * otro.numerador
   }
 
+  def sumar(otro:Racional) = {
+    new Racional(numerador*otro.denominador + denominador*otro.numerador, denominador*otro.denominador)
+  }
+
+  // Sobrecarga de operadores
+  def +(otro:Racional) = {
+    new Racional(numerador*otro.denominador + denominador*otro.numerador, denominador*otro.denominador)
+  }
+
   // Calcular MCD para simplificar la fracción
   private def maximoComunDivisor(a:Int, b:Int):Int = {
     if (b == 0) a
