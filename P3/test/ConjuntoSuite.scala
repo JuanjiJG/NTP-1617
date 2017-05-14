@@ -30,7 +30,7 @@ class ConjuntoSuite extends FunSuite {
   }
 
   /**
-    * Test for union
+    * Test para la unión
     */
   test("test de union") {
     new TestSets {
@@ -63,7 +63,7 @@ class ConjuntoSuite extends FunSuite {
   }
 
   /**
-    * Test para interseccion
+    * Test para la intersección
     */
   test("Test de interseccion") {
     val conjunto1 = Conjunto((x: Int) => x > 3)

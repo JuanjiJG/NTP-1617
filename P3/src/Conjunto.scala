@@ -62,7 +62,8 @@ object Conjunto {
     * @return un conjunto que representa a ese único elemento
     */
   def conjuntoUnElemento(elemento: Int): Conjunto = {
-    new Conjunto((x: Int) => x == elemento)
+    // Se devuelve un conjunto tal que dado un x cualquiera, ese x es igual al elemento
+    Conjunto((x: Int) => x == elemento)
   }
 
   /**
@@ -73,6 +74,8 @@ object Conjunto {
     * @return un conjunto que es el resultado de la unión de los dos conjuntos
     */
   def union(c1: Conjunto, c2: Conjunto): Conjunto = {
+    // Se devuelve un conjunto tal que, dado un elemento cualquiera, está contenido
+    // en uno de los dos conjuntos, o en ambos
     Conjunto((x: Int) => c1(x) || c2(x))
   }
 
@@ -84,6 +87,8 @@ object Conjunto {
     * @return un conjunto que es el resultado de la intersección de los dos conjuntos
     */
   def interseccion(c1: Conjunto, c2: Conjunto): Conjunto = {
+    // Se devuelve un conjunto tal que, dado un elemento cualquiera,
+    // está contenido en AMBOS conjuntos
     Conjunto((x: Int) => c1(x) && c2(x))
   }
 
@@ -95,7 +100,9 @@ object Conjunto {
     * @return un conjunto que es el resultado de la difererncia de los dos conjuntos
     */
   def diferencia(c1: Conjunto, c2: Conjunto): Conjunto = {
-    new Conjunto((x: Int) => c1(x) && !c2(x))
+    // Se devuelve un conjunto tal que, dado un elemento cualquiera,
+    // está contenido en el primer conjunto PERO NO EN EL SEGUNDO
+    Conjunto((x: Int) => c1(x) && !c2(x))
   }
 
   /**
@@ -106,7 +113,9 @@ object Conjunto {
     * @return un conjunto filtrado con solo los elementos que cumplen el predicado
     */
   def filtrar(c: Conjunto, predicado: Int => Boolean): Conjunto = {
-    new Conjunto((x: Int) => c(x) && predicado(x))
+    // Se devuelve un conjunto tal que, dado un elemento cualquiera,
+    // está contenido en el conjunto y además CUMPLE LA CONDICIÓN
+    Conjunto((x: Int) => c(x) && predicado(x))
   }
 
   /**
@@ -138,6 +147,11 @@ object Conjunto {
     * @return un booleano que indica si existe al menos un elemento que cumple el predicado
     */
   def existe(c: Conjunto, predicado: Int => Boolean): Boolean = {
+    /*
+    Para resolver este método, aplicamos el siguiente razonamiento:
+      Si se cumple que NO TODOS los elementos cumplen el predicado !p,
+      significa que al menos, hay un elemento que sí cumple el predicado p.
+     */
     !paraTodo(c, x => !predicado(x))
   }
 
@@ -149,6 +163,9 @@ object Conjunto {
     * @return un conjunto nuevo resultado de mapear el pasado como argumento
     */
   def map(c: Conjunto, funcion: Int => Int): Conjunto = {
-    new Conjunto((x: Int) => existe(c, y => funcion(y) == x))
+    // Haciendo uso de la función "existe", creamos un conjunto tal que,
+    // dado un elemento cualquiera, existe como elemento del conjunto c
+    // y cumple el predicado
+    Conjunto((x: Int) => existe(c, y => funcion(y) == x))
   }
 }
